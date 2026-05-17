@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Light theme */
+  --background: #fafafa;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-border: #e5e5e5;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --muted: #666666;
+  --border: #e5e5e5;
+}
+
+.dark {
+  /* Dark theme */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #111111;
+  --card-border: #262626;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --muted: #a1a1aa;
+  --border: #262626;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Modern portfolio styles */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.project-card {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), 
+              box-shadow 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+              border-color 0.2s ease;
+  border: 1px solid var(--card-border);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-color: var(--accent);
+}
+
+.skill-pill {
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  background-color: var(--accent);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.section-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), transparent);
+  border-radius: 3px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--card);
+  border-color: var(--accent);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive project grid */
+@media (max-width: 768px) {
+  .project-card {
+    transform: none !important;
+  }
+}
