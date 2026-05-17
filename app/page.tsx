@@ -151,7 +151,7 @@ export default function RobDeVriesPortfolio() {
           Rob de Vries
         </h1>
         <p className="text-2xl md:text-3xl text-[var(--muted)] tracking-tight mb-6">
-          [Jouw titel hier — bijv. Software Engineer &amp; Product Designer]
+          [Program Manager]
         </p>
         
         <p className="max-w-xl mx-auto text-lg text-[var(--muted)] mb-10">
